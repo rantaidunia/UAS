@@ -16,14 +16,26 @@ public class Hotel extends Reservasi {
     }
 
     public void deleteHotel(int hotelId) {
-        Data hotel = getHotelById(hotelId);
-        if (hotel != null) {
-            Hotel.data.remove(hotel);
-            System.out.println("Hotel with ID " + hotelId + " has been deleted");
-        } else {
-            System.out.println("Hotel with ID " + hotelId + " does not exist");
+    Data hotel = getHotelById(hotelId);
+    if (hotel != null) {
+        Hotel.data.remove(hotel);
+        System.out.println("Hotel with ID " + hotelId + " has been deleted");
+
+        // Remove rooms associated with the deleted hotel
+        ArrayList<Reservasi> roomsToRemove = new ArrayList<>();
+        for (Reservasi room : Hotel.rooms) {
+            if (room.getId() == hotelId) {
+                roomsToRemove.add(room);
+            }
         }
+        Hotel.rooms.removeAll(roomsToRemove);
+
+        System.out.println("Rooms associated with Hotel ID " + hotelId + " have been removed");
+    } else {
+        System.out.println("Hotel with ID " + hotelId + " does not exist");
     }
+}
+
 
     public Boolean isHotelIdExist(int id) {
         Boolean isExist = false;
