@@ -1,15 +1,6 @@
 public abstract class Reservasi {
     private int id;
     private String room;
-    
-    public Reservasi(){
-
-    }
-
-    public Reservasi(int id, String room){
-        this.id = id;
-        this.room = room;
-    }
 
     public abstract void addRoom(Reservasi room);
 

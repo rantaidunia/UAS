@@ -12,6 +12,20 @@ class Data{
 
      public ArrayList<Reservasi> reserved = new ArrayList<>();
 
+     public Data(){
+
+     }
+
+     public Data(int id, String nama, String tipeKamar, String restaurant, String service, int jumlahKamar, int biayaPenginapan){
+        this.id = id;
+        this.nama = nama;
+        this.tipeKamar = tipeKamar;
+        this.restaurant = restaurant;
+        this.service = service;
+        this.jumlahKamar = jumlahKamar;
+        this.biayaPenginapan = biayaPenginapan;
+     }
+
      public void reserve(Reservasi room) {
         this.reserved.add(room);
         System.out.println(reserved);
