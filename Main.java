@@ -28,7 +28,7 @@ static Scanner scan = new Scanner(System.in);
         } else if (selectedMenu == 7) {
           reserved();
         } else if (selectedMenu == 8) {
-          receipt();
+          reservedroom();
 
         } else {
           System.out.println("invalid option");
@@ -229,7 +229,7 @@ public static void showRooms() {
     hotel.reservasi(HotelId, Roomname);
   }
 
-  public static void receipt(){
+  public static void reservedroom(){
     hotel.showReservedRooms();
   }
   
