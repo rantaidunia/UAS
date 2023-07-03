@@ -48,13 +48,21 @@ public class Hotel extends Reservasi {
     }
 
     public void addRoom(Reservasi room) {
-    if (!isRoomnameExist(room.getRoom(), room.getId())) {
+    int hotelId = room.getId();
+
+    if (!isHotelIdExist(hotelId)) {
+        System.out.println("Hotel with ID " + hotelId + " does not exist.");
+        return;
+    }
+
+    if (!isRoomnameExist(room.getRoom(), hotelId)) {
         Hotel.rooms.add(room);
         System.out.println("Room added successfully.");
     } else {
-        System.out.println("Room with name " + room.getRoom() + " already exists for hotel ID " + room.getId() + ".");
+        System.out.println("Room with name " + room.getRoom() + " already exists for hotel ID " + hotelId + ".");
     }
 }
+
 
     public Boolean isRoomnameExist(String roomname, int hotelId) {
     Boolean isExist = false;
