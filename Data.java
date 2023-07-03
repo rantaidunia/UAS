@@ -35,9 +35,7 @@ class Data{
         this.reserved.remove(room);
     }
 
-    public void addHotel(Data hotel){
-        System.out.println("method add hotel");
-    }
+    
 
     
 }

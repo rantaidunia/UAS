@@ -19,6 +19,10 @@ public abstract class Reservasi {
     public String getRoom(){
     return room;
     }
+    
+    public void addHotel(Data hotel){
+        System.out.println("method add hotel");
+    }
 
     
 
