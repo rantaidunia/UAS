@@ -85,6 +85,8 @@ static Scanner scan = new Scanner(System.in);
     hotel3.service = "24 carat phone";
     hotel3.jumlahKamar = 120;
     hotel3.biayaPenginapan = 120000;
+
+    Data hotel4 = new Data(4,"s", "s", "a", "b", 1, 4);
     
     Reservasi room1 = new Hotel();
     room1.setId(1);
@@ -127,6 +129,7 @@ static Scanner scan = new Scanner(System.in);
     Hotel.data.add(hotel1);
     Hotel.data.add(hotel2);
     Hotel.data.add(hotel3);
+    Hotel.data.add(hotel4);
 
     Hotel.rooms.add(room1);
     Hotel.rooms.add(room2);

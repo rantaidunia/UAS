@@ -28,7 +28,6 @@ class Data{
 
      public void reserve(Reservasi room) {
         this.reserved.add(room);
-        System.out.println(reserved);
     }
     
     public void unreserve(Reservasi room) {
