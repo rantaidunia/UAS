@@ -140,18 +140,6 @@ public class Hotel extends Reservasi {
     return null;
 }
 
-// public void showReservedRooms() {
-//     System.out.println("Reserved Rooms:");
-//     for (Data hotel : data) {
-//         System.out.println("Hotel ID: " + hotel.id);
-//         for (Reservasi room : hotel.reserved) {
-//             System.out.println("Room: " + room.getRoom());
-//             System.out.println("--------------------------");
-//         }
-//         System.out.println();
-//     }
-// }
-
 public void showReservedRooms() {
     System.out.println("Reserved Rooms:");
     for (Data hotel : data) {
